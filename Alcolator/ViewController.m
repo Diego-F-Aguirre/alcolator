@@ -48,7 +48,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor brownColor];
+    self.beerPercentTextField.backgroundColor = [UIColor magentaColor];
+    self.beerCountSlider.backgroundColor = [UIColor orangeColor];
+    self.calculateButton.backgroundColor = [UIColor purpleColor];
+    self.resultLabel.textColor = [UIColor whiteColor];
+
     self.beerPercentTextField.delegate = self;
     self.beerPercentTextField.placeholder = NSLocalizedString(@"Alcohol Content Per Beer", @"Beer percent placeholder text");
     [self.beerCountSlider addTarget:self action:@selector(sliderValueDidChange:) forControlEvents:UIControlEventValueChanged];
@@ -71,6 +76,7 @@
 
 
 - (void)textFieldDidChange:(UITextField *)sender {
+    
     NSString *enteredText = sender.text;
     float enteredNumber = [enteredText floatValue];
     
@@ -142,7 +148,6 @@
 }
 
 
-
 - (void) viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
@@ -150,6 +155,7 @@
     CGFloat padding = 20;
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
+    
     
     self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
     
@@ -162,6 +168,8 @@
     CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
     self.calculateButton.frame = CGRectMake(padding, bottomOfLabel + padding, itemWidth, itemHeight);
 }
+
+
 
 
 
