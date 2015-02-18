@@ -8,13 +8,17 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "MainMenuViewController.h"
+#import "WhiskeyViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
+
+
 
 @end
 
 @implementation AppDelegate
+
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -22,9 +26,14 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
     // Override point for customization after application launch.
-    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    self.window.rootViewController = navigationController;
+    ViewController *wineVC = [[ViewController alloc]init];
+    WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc]init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc]init];
+    tabBarVC.viewControllers = @[wineVC,whiskeyVC];
+    tabBarVC.delegate = self;
+    
+    self.window.rootViewController = tabBarVC;
+    
     [self.window makeKeyAndVisible];
     
     
