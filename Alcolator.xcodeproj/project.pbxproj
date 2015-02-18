@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC009D0F1A91401400C05CF7 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC009D0E1A91401400C05CF7 /* MainMenuViewController.m */; };
 		BCBEF33C1A8B91A2008E26BB /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBEF33B1A8B91A2008E26BB /* WhiskeyViewController.m */; };
 		BCDCA8031A89B25000E9A533 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA8021A89B25000E9A533 /* main.m */; };
 		BCDCA8061A89B25000E9A533 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDCA8051A89B25000E9A533 /* AppDelegate.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC009D0D1A91401400C05CF7 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuViewController.h; path = Alcolator/MainMenuViewController.h; sourceTree = "<group>"; };
+		BC009D0E1A91401400C05CF7 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = Alcolator/MainMenuViewController.m; sourceTree = "<group>"; };
 		BCBEF33A1A8B91A2008E26BB /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhiskeyViewController.h; path = Alcolator/WhiskeyViewController.h; sourceTree = "<group>"; };
 		BCBEF33B1A8B91A2008E26BB /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhiskeyViewController.m; path = Alcolator/WhiskeyViewController.m; sourceTree = "<group>"; };
 		BCDCA7FD1A89B25000E9A533 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +67,8 @@
 		BCDCA7F41A89B25000E9A533 = {
 			isa = PBXGroup;
 			children = (
+				BC009D0D1A91401400C05CF7 /* MainMenuViewController.h */,
+				BC009D0E1A91401400C05CF7 /* MainMenuViewController.m */,
 				BCBEF33A1A8B91A2008E26BB /* WhiskeyViewController.h */,
 				BCBEF33B1A8B91A2008E26BB /* WhiskeyViewController.m */,
 				BCDCA7FF1A89B25000E9A533 /* Alcolator */,
@@ -224,6 +229,7 @@
 				BCBEF33C1A8B91A2008E26BB /* WhiskeyViewController.m in Sources */,
 				BCDCA8061A89B25000E9A533 /* AppDelegate.m in Sources */,
 				BCDCA8031A89B25000E9A533 /* main.m in Sources */,
+				BC009D0F1A91401400C05CF7 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
