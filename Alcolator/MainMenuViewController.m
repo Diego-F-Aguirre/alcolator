@@ -37,7 +37,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithWhite:0.91f alpha:1];
+    self.view.backgroundColor = [UIColor colorWithWhite:0.21f alpha:1];
     
     UIFont *bigFont = [UIFont boldSystemFontOfSize:20];
     

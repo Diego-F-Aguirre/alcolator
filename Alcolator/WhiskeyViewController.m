@@ -7,6 +7,7 @@
 //
 
 #import "WhiskeyViewController.h"
+#import "ViewController.h"
 
 @interface WhiskeyViewController ()
 
@@ -65,8 +66,22 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.588 alpha:1];
-}
+    
+    self.beerPercentTextField.backgroundColor = [UIColor colorWithRed:217/255.0 green:84/255.0 blue:72/255.0 alpha:1];
+    self.beerCountSlider.backgroundColor = [UIColor colorWithRed:217/255.0 green:84/255.0 blue:72/255.0 alpha:1];
+    self.resultLabel.textColor = [UIColor colorWithRed:217/255.0 green:84/255.0 blue:72/255.0 alpha:1];
+    self.calculateButton.backgroundColor = [UIColor colorWithRed:217/255.0 green:84/255.0 blue:72/255.0 alpha:1];
+
+    self.beerPercentTextField.textColor = [UIColor whiteColor];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:89/255.0 green:2/255.0 blue:2/255.0 alpha:1];
+    
+    
+    
+    
+   
+    
+    }
 
 
 /*

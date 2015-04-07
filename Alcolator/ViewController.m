@@ -11,7 +11,7 @@
 @interface ViewController () <UITextFieldDelegate>
 
 
-@property (weak, nonatomic) UIButton *calculateButton;
+
 @property (weak, nonatomic) UITapGestureRecognizer *hideKeyboardTapGestureRecognizer;
 @property (weak, nonatomic) UILabel *beerCountDisplay;
 
@@ -56,6 +56,8 @@
     self.hideKeyboardTapGestureRecognizer = tap;
     
     
+    
+    
 
 }
 
@@ -64,10 +66,16 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor brownColor];
-    self.beerPercentTextField.backgroundColor = [UIColor magentaColor];
-    self.beerCountSlider.backgroundColor = [UIColor orangeColor];
-    self.calculateButton.backgroundColor = [UIColor purpleColor];
-    self.resultLabel.textColor = [UIColor whiteColor];
+    self.beerPercentTextField.backgroundColor = [UIColor colorWithRed:119/255.0 green:155/255.0 blue:224/255.0 alpha:1];
+    self.beerCountSlider.backgroundColor = [UIColor colorWithRed:119/255.0 green:155/255.0 blue:224/255.0 alpha:1];
+    self.calculateButton.backgroundColor = [UIColor colorWithRed:119/255.0 green:155/255.0 blue:224/255.0 alpha:1];
+    self.resultLabel.textColor = [UIColor colorWithRed:119/255.0 green:155/255.0 blue:224/255.0 alpha:1];
+    self.beerPercentTextField.textColor = [UIColor whiteColor];
+    [self.calculateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [self.resultLabel setFont:[UIFont fontWithName:@"Avenir Next Ultra Light" size:16]];
+    self.calculateButton.titleLabel.font = [UIFont fontWithName:@"Avenir Next Ultra Light" size:20];
+    
 
     self.beerPercentTextField.delegate = self;
     self.beerPercentTextField.placeholder = NSLocalizedString(@"Alcohol Content Per Beer", @"Beer percent placeholder text");
@@ -77,10 +85,11 @@
     
     [self.calculateButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
+    
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     self.resultLabel.numberOfLines = 0;
     
-    self.view.backgroundColor= [UIColor colorWithRed:0.742 green:0.925 blue:0.714 alpha:1];
+    self.view.backgroundColor= [UIColor colorWithRed:18/255.0 green:22/255.0 blue:35/255.0 alpha:1];
     
   
     
@@ -112,6 +121,8 @@
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    
+    self.resultLabel.text = [NSString stringWithFormat:@"%f Beers",self.beerCountSlider.value];
     
     [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
     
